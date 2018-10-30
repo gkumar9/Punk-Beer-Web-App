@@ -2,7 +2,7 @@
 <div>
     <div class="field">
     <div class="columns">
-      <div class="column is-1 is-offset-3"></div>
+      <div class="column is-1 is-offset-2"></div>
       <div class="column">
         <input class="input is-medium" v-model="search" type="text" placeholder="Search for beer name...">
       </div>
@@ -14,7 +14,7 @@
     </div>
     <div class="container">
     <div v-if="noresult">
-      <span>No Results Found ...</span>
+      <h1>No Results Found ...</h1>
     </div>
     <div class="columns is-multiline">
 
@@ -88,8 +88,17 @@ export default {
       
     },
     fav(item){
-      if(item.id)
+      let temp=false;
+      for(let i=0;i<this.$store.state.favourite.length;i++){
+        if(item.id==this.$store.state.favourite[i].id){
+          temp=true;
+          break;
+        }
+      }
+      if(!temp){
+        
       this.$store.state.favourite.push(item)
+      }
     }
   },
   watch: {
@@ -140,4 +149,7 @@ export default {
 .change-icon:hover > .far + .fas {
   display: inherit;
 }
+h1{
+  font-size: x-large;
+ }
 </style>
