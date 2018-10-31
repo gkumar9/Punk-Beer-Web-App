@@ -1,20 +1,20 @@
 <template>
-  <div id="app">
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <a class="navbar-item" href="#">
-      <h1>Punk Beer Web App</h1>
-    </a>
-    <div class="navbar-end">
-        <div class="navbar-item">
-          <a @click="route('/')"><span>Home</span></a>
-        </div>
-        <div class="navbar-item">
-          <a @click="route('favourite')" ><span>Favourite</span></a>
-        </div>
-      </div>
-  </nav>
-    <router-view/>
-  </div>
+   <div id="app">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+         <a class="navbar-item" @click="route('/')">
+            <h1>Punk Beer Web App</h1>
+         </a>
+         <div class="navbar-end">
+            <div class="navbar-item">
+               <a @click="route('/')"><span>Home</span></a>
+            </div>
+            <div class="navbar-item">
+               <a @click="route('/favourite')" ><span>Favourite</span></a>
+            </div>
+         </div>
+      </nav>
+      <router-view/>
+   </div>
 </template>
 
 <script>
@@ -26,7 +26,6 @@ export default {
   },
   methods:{
     route(rot){
-      console.log('rot')
       this.$router.push(rot)
     }
   }
@@ -44,4 +43,7 @@ export default {
  .navbar{
     background-color: #00d1b2;
   }
+  h1{
+  font-size: x-large;
+ }
 </style>
