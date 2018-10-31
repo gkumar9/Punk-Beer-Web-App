@@ -41,9 +41,9 @@ export default {
   color: #2c3e50;
 }
  .navbar{
-    background-color: #00d1b2;
+    background-color: #00d1b2 !important;
   }
   h1{
-  font-size: x-large;
+  font-size: 30px !important;
  }
 </style>

@@ -4,7 +4,7 @@
          <div class="columns">
             <div class="column is-1 is-offset-2"></div>
             <div class="column">
-               <input class="input is-medium" v-model="search" type="text" placeholder="Search for beer name...">
+               <input v-on:keypress.enter="apisearch()" class="input is-medium" v-model="search" type="text" placeholder="Search for beer name...">
             </div>
             <div class="column">
                <button style="float: left;" @click="apisearch()" class="button is-medium is-info">Search</button>
